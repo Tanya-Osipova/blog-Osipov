@@ -1,0 +1,39 @@
+.hamburger {
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+  position: relative;
+  z-index: 999;
+  display: none;
+}
+
+.bar {
+  width: 2rem;
+  height: 0.2rem;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.8s ease-in-out;
+}
+
+.bar_middle {
+  width: 1.5rem;
+  margin: 0.5rem;
+  margin-right: 0;
+}
+
+.active .bar_top {
+  transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
+}
+
+.active .bar_middle {
+  opacity: 0;
+}
+
+.active .bar_bottom {
+  transform: rotate(45deg) translate(-0.5rem, -0.5rem);
+}
+
+@media screen and (max-width: 800px) {
+  .hamburger {
+    display: block;
+  }
+}

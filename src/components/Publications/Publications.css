@@ -1,0 +1,24 @@
+.publications {
+  background-color: #f2f2f2;
+  padding: 1rem 0;
+}
+
+.publications__list {
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .publications__list {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .publications__list {
+    grid-template-columns: auto;
+  }
+}
