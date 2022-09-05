@@ -1,0 +1,8 @@
+.blog {
+  background-color: #eafafa;
+  padding: 2rem 0;
+}
+
+.blog__list {
+  list-style: none;
+}

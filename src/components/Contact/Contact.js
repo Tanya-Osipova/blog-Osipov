@@ -1,5 +1,9 @@
 import React from 'react';
-import avatar from '../../images/heroImage.jpg'
+import { FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaSuitcase } from "react-icons/fa";
+import avatar from '../../images/logo/logo.png'
 import './Contact.css';
 
 function Contact() {
@@ -12,16 +16,24 @@ function Contact() {
       </div>
       <ul className="contact__list">
         <li>
-          <p className='contact__data'><i className="fa-solid fa-location-dot contact__icon"></i>Leuven, Belgium</p>
+          <p className='contact__data'>
+            <FaMapMarkerAlt className='contact__icon'/>Leuven, Belgium 
+          </p>
         </li>
         <li>
-          <p className='contact__data'><i className="fa-solid fa-suitcase contact__icon"></i>KU Leuven</p>
+          <p className='contact__data'>
+            <FaSuitcase className='contact__icon' />KU Leuven
+          </p>
         </li>
         <li>
-          <p className='contact__data'><i className="fa-solid fa-envelope contact__icon"></i>email@email.com</p>
+          <p className='contact__data'>
+            <FaEnvelope className='contact__icon' />email@email.com
+          </p>
         </li>
         <li>
-          <p className='contact__data'><i className="fa-solid fa-phone contact__icon"></i>8943934</p>
+          <p className='contact__data'>
+            <FaPhoneAlt className='contact__icon' />77777777777
+          </p>
         </li>
       </ul>
     </div>

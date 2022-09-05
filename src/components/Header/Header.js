@@ -4,19 +4,19 @@ import { useSpring, animated } from 'react-spring';
 import Nav from '../Nav/Nav';
 import './Header.css';
 
-function Header() {
+function Header(props) {
 
-  const props = useSpring({
+  const animStyle = useSpring({
     from: { opacity: 0, transform: 'scale(0)' },
     to: { opacity: 1, transform: 'scale(1)' }, 
-    delay: 500,
+    delay: 400,
     config: {duration: 1000},
   })
   
   return (
     <header className='header'>
       <Nav />
-      <animated.div style={props}>
+      <animated.div style={animStyle}>
         <div className="header__info">
           <div className='header__content'>
             <h1 className='header__title'>

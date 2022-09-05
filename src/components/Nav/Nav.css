@@ -13,6 +13,14 @@
   z-index: 20;
   background: #1c797d;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.8s ease-in-out;
+}
+
+.nav_transparent {
+  max-width: 100%;
+  padding: 0.4rem 5rem;
+  transition: all 0.8s ease-in-out;
+  background: transparent;
 }
 
 .nav__logo {
@@ -165,7 +173,8 @@
     margin-bottom: 1rem;
   }
 
-  .nav__link {
+  .nav__link,
+  .nav__button {
     font-size: 1.3rem;
   }
 
@@ -175,6 +184,10 @@
 
   .nav__icon {
     opacity: 1;
+  }
+
+  .nav__icon {
+    margin-right: 12px;
   }
 }
 

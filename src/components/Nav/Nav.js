@@ -1,23 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { FaDna } from "react-icons/fa";
 import { FaEnvelope } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
 import { FaEdit } from 'react-icons/fa';
 import { FaBook } from 'react-icons/fa';
 import Hamburger from '../Hamburger/Hamburger';
-import './Nav.css';
 import Contact from '../Contact/Contact';
 import Popup from '../Popup/Popup';
+import './Nav.css';
 
-function Nav() {
+function Nav(props) {
   const [sidebarActive, setSidebarActive] = useState(false);
   const [fixedNav, setFixedNav] = useState(false);
   const [popupActive, setPopupActive] = useState(false);
+  const windowHeight = 200;
+
+  // lock body when sidebar is open
+  useEffect(() => {
+    if (sidebarActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "unset";
+      }
+  }, [sidebarActive]);
 
   // add fixed nav
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY >= 100) {
+      if (window.scrollY >= windowHeight) {
         setFixedNav(true);
       } else {
         setFixedNav(false);
@@ -50,7 +61,7 @@ function Nav() {
       <div className="nav__content">
         <Link to="/">
           <p>
-            <i className="fas fa-dna nav__logo"></i>
+            <FaDna className='nav__logo' />
           </p>
         </Link>
         <Hamburger 
@@ -60,7 +71,7 @@ function Nav() {
         <ul className={sidebarActive ? 'nav__list nav__list_active' : 'nav__list'}>
           <li className='nav__item'>
             <NavLink
-              to="/"
+              exact to="/"
               className='nav__link nav__link_home'
               activeClassName="nav__link_active"
               onClick={() => setSidebarActive(!sidebarActive)}
