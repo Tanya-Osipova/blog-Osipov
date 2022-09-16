@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
-import Nav from '../Nav/Nav';
+import NavHome from '../NavHome/NavHome';
 import './Header.css';
 
 function Header(props) {
@@ -15,7 +15,7 @@ function Header(props) {
   
   return (
     <header className='header'>
-      <Nav />
+      <NavHome />
       <animated.div style={animStyle}>
         <div className="header__info">
           <div className='header__content'>

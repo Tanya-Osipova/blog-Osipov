@@ -4,10 +4,11 @@ import './ScrollToTopButton.css';
 
 const TopButton = () => {
   const [showTopButton, setShowTopButton] = useState(false);
+  const windowHeight = 300;
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > windowHeight) {
         setShowTopButton(true);
       } else {
         setShowTopButton(false);
@@ -24,6 +25,7 @@ const TopButton = () => {
 
   return (
     <button 
+      type='button'
       className={showTopButton ? 'top-button' : ''}
       onClick={handleToTopButton}
     >

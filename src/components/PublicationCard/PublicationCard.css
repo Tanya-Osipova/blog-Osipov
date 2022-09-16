@@ -1,3 +1,15 @@
+@keyframes transfer {
+  from {
+    height: 0;
+    bottom: 100%;
+  }
+
+  to {
+    height: 310px;
+    bottom: 0;
+  }
+}
+
 .publication-card__item {
   position: relative;
   width: 300px;
@@ -26,13 +38,10 @@
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  transition: .8s ease-in-out;
-}
-
-.publication-card__item:hover .publication-card__overlay {
-  height: 310px;
-  bottom: 0;
   border-bottom: 1px solid #1c797d;
+  transition: .8s ease-in-out;
+  animation: transfer 2s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .publication-card__text {
@@ -90,12 +99,6 @@
 .publication-card__links-item:hover .publication-card__icon {
   color: #1c797d;
   transform: scale(1.3);
-}
-
-@media screen and (max-width: 800px) {
-  .publication-card__overlay {
-    height: 310px;
-  }
 }
 
 @media screen and (max-width: 340px) {

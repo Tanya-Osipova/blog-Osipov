@@ -1,1 +1,1 @@
-# Osipov Blog
+# Evgenii Osipov Blog

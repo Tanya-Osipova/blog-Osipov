@@ -12,6 +12,7 @@ const Popup = ({ active, setActive, children }) => {
         onClick={e => e.stopPropagation()}
       >
         <button 
+          type='button'
           className='popup__close-button' 
           onClick={() => setActive(!active)}
         >

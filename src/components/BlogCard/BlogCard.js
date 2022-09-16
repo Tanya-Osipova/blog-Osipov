@@ -27,7 +27,11 @@ function BlogCard({ id, image, title, date, text }) {
           {readMore ? text : `${text.substring(0, 300)}...`}
         </p>
         
-        <button className="blog__read-more" onClick={() => setReadMore(!readMore)}>
+        <button 
+          type='button'
+          className="blog__read-more" 
+          onClick={() => setReadMore(!readMore)}
+        >
           {readMore ? <FaChevronUp className='blog__arrow' /> : <FaChevronDown className='blog__arrow' />}
         </button>
       </li>

@@ -1,0 +1,32 @@
+.blog__more-button {
+  padding: 10px 25px;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #1c797d;
+  background: #1c797d;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.80rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.blog__more-button:hover .blog__button-text {
+  display: none;
+}
+
+.blog__icon {
+  font-size: 1rem;
+  display: none;
+  transition: all .5s ease-in-out;
+}
+
+.blog__more-button:hover .blog__icon {
+  display: flex;
+}

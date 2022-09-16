@@ -1,0 +1,52 @@
+.input-container {
+  width: 50%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  background: #1c797d url('../../images/icons/search.svg') no-repeat;
+  background-size: 40px;
+  background-position: 10px 0;
+  padding: 10px 10px 10px 50px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  width: 300px;
+  transition: .8s ease-in-out;
+}
+
+.input:focus {
+  width: 100%;
+}
+
+.input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #9999a3;
+}
+
+@media screen and (max-width: 800px) {
+  .input-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .input-container {
+    width: 95%;
+    justify-content: start;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .input:focus {
+    border: 2px solid #9999a3;
+  }
+}

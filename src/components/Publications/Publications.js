@@ -3,27 +3,47 @@ import Nav from '../Nav/Nav';
 import PublicationCard from '../PublicationCard/PublicationCard';
 import Footer from '../Footer/Footer';
 import Title from '../Title/Title';
-import publicationData from '../../data/publications';
 import './Publications.css';
+import Input from '../Input/Input';
+import Loader from '../Loader/Loader';
 
-const Publications = (props) => {
-  const cards = publicationData.map((card) => {
-    return (
-      <PublicationCard 
-        key={card.id}
-        {...card}
-      />
-    )
-  })
-  
+const Publications = ({ 
+  publicationData, 
+  handleSearchInput, 
+  searchTerm, 
+  isLoading,
+  isError,
+}) => {
   return (
     <>
       <Nav />
-      <Title>Publications</Title>
       <section className='publications'>
-        <ul className="publications__list">
-          {cards}
-        </ul>
+        <Title>Publications</Title>
+        <Input
+          id='search'
+          type='text'
+          placeholder='Search By Title'
+          value={searchTerm}
+          onInputChange={handleSearchInput} 
+          searchTerm={searchTerm} 
+        />
+        
+        {isError && <p className='data-fetching-error'>Something went wrong...</p>}
+
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <ul className="publications__list">
+            {publicationData.map((card) => {
+              return (
+                <PublicationCard 
+                  key={card.id}
+                  {...card}
+                />
+              )
+            })}
+          </ul>
+        )}
       </section>
       <Footer />
     </>
