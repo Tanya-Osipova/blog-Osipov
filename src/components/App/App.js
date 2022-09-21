@@ -74,8 +74,8 @@ function App() {
     setSearchTerm(event.target.value);
   };
 
-  const searchedPublications = publicationData.filter((story) => 
-    story.title.toLowerCase().includes(searchTerm.toLowerCase())
+  const searchedPublications = publicationData.filter((publication) => 
+    publication.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
   
   return (

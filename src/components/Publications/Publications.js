@@ -14,6 +14,13 @@ const Publications = ({
   isLoading,
   isError,
 }) => {
+
+  // if (!publicationData.length) {
+  //   return (
+  //     <p>Not found</p>
+  //   )
+  // }
+
   return (
     <>
       <Nav />
@@ -29,7 +36,7 @@ const Publications = ({
         />
         
         {isError && <p className='data-fetching-error'>Something went wrong...</p>}
-
+        {!publicationData.length && <p className='data-fetching-error'>No publication found</p>}
         {isLoading ? (
           <Loader />
         ) : (
