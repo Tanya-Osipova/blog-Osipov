@@ -19,3 +19,7 @@ The project includes:
 
 - [react-spring animation library](https://react-spring.dev/)
 - [react-icons](https://react-icons.github.io/react-icons/)
+
+**Netlify**
+
+- [Link](https://osipovblog.netlify.app/)
