@@ -11,7 +11,7 @@ function BlogCard({ id, image, title, date, text }) {
     from: { opacity: 0, transform: 'scale(0)' },
     to: { opacity: 1, transform: 'scale(1)' }, 
     delay: 300,
-    config: {duration: 1000},
+    config: {duration: 600},
   })
 
   return (

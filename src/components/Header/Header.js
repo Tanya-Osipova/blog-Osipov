@@ -9,8 +9,8 @@ function Header(props) {
   const animStyle = useSpring({
     from: { opacity: 0, transform: 'scale(0)' },
     to: { opacity: 1, transform: 'scale(1)' }, 
-    delay: 400,
-    config: {duration: 1000},
+    delay: 300,
+    config: {duration: 600},
   })
   
   return (
