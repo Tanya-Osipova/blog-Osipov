@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaLinkedinIn } from 'react-icons/fa';
-import { FaTelegramPlane } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import './Footer.css';
 
 function Footer(props) {
@@ -10,13 +10,20 @@ function Footer(props) {
       <div className="footer__content">
         <ul className="footer__list">
           <li className='footer__item'>
-            <FaTwitter className='footer__icon' />
+            <Link
+              to={{ pathname: "https://github.com/Tanya-Osipova" }}
+              target="_blank"
+            >
+              <FaGithub className='footer__icon'/>
+            </Link>
           </li>
           <li className='footer__item'>
-            <FaTelegramPlane className='footer__icon'/>
-          </li>
-          <li className='footer__item'>
-            <FaLinkedinIn className='footer__icon' />
+            <Link
+              to={{ pathname: "https://www.linkedin.com/in/tanya-osipova/" }}
+              target="_blank"
+            >
+              <FaLinkedinIn className='footer__icon' />
+            </Link>
           </li>
         </ul>
         <p className='footer__copyright'>

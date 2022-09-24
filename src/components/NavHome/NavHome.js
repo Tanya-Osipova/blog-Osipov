@@ -5,6 +5,7 @@ import { FaEnvelope } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
 import { FaEdit } from 'react-icons/fa';
 import { FaBook } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 import Hamburger from '../Hamburger/Hamburger';
 import Contact from '../Contact/Contact';
 import Popup from '../Popup/Popup';
@@ -65,6 +66,17 @@ function NavHome(props) {
             >
               <FaHome className='nav__icon' />
               Home
+            </NavLink>
+          </li>
+          <li className='nav__item'>
+            <NavLink
+              to="/about"
+              className='nav__link'
+              activeClassName="nav__link_active"
+              onClick={() => setSidebarActive(!sidebarActive)}
+            >
+              <FaUserCircle className='nav__icon' />
+              About
             </NavLink>
           </li>
           <li className='nav__item'>

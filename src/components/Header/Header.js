@@ -23,7 +23,8 @@ function Header(props) {
               Evgenii Osipov
             </h1>
             <p className='header__subtitle'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, aspernatur.
+              Laboratory for Biocrystallography, 
+              Department of Pharmaceutical Sciences, KU Leuven O&amp;N2
             </p>
             <Link 
               to='/blog'

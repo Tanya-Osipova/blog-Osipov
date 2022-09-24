@@ -19,7 +19,7 @@
   font-weight: 900;
   font-size: 3rem;
   margin-bottom: 0.6rem;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -86,10 +86,10 @@
   transition: .1s linear;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .header__title {
     font-size: 1.7rem;
-  }
+  } 
 
   .header__subtitle {
     font-size: 0.90rem;

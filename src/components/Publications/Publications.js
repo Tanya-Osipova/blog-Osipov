@@ -3,9 +3,9 @@ import Nav from '../Nav/Nav';
 import PublicationCard from '../PublicationCard/PublicationCard';
 import Footer from '../Footer/Footer';
 import Title from '../Title/Title';
-import './Publications.css';
 import Input from '../Input/Input';
 import Loader from '../Loader/Loader';
+import './Publications.css';
 
 const Publications = ({ 
   publicationData, 
@@ -14,13 +14,6 @@ const Publications = ({
   isLoading,
   isError,
 }) => {
-
-  // if (!publicationData.length) {
-  //   return (
-  //     <p>Not found</p>
-  //   )
-  // }
-
   return (
     <>
       <Nav />
@@ -34,7 +27,6 @@ const Publications = ({
           onInputChange={handleSearchInput} 
           searchTerm={searchTerm} 
         />
-        
         {isError && <p className='data-fetching-error'>Something went wrong...</p>}
         {!publicationData.length && <p className='data-fetching-error'>No publication found</p>}
         {isLoading ? (

@@ -2,6 +2,7 @@ import React, { useEffect, useReducer } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from '../Home/Home';
 import Blog from '../Blog/Blog';
+import About from '../About/About';
 import Publications from '../Publications/Publications';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import publicationData from '../../data/publications';
@@ -83,6 +84,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/about">
+          <About />
         </Route>
         <Route path="/publications">
           <Publications 
