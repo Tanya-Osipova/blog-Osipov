@@ -5,9 +5,8 @@ import Title from '../Title/Title';
 import OsipovPic from '../../images/about/Evgenii.jpg';
 import './About.css';
 
-function About(props) {
-  return (
-    <>
+const About = () => (
+  <>
     <Nav />
     <section className='about'>
       <Title>About Me</Title>
@@ -21,8 +20,7 @@ function About(props) {
         </div>
     </section>
     <Footer />
-    </>
-  );
-}
+  </>
+);
 
 export default About;

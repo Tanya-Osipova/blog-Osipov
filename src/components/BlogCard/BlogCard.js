@@ -4,7 +4,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { FaChevronUp } from "react-icons/fa";
 import './BlogCard.css';
 
-function BlogCard({ id, image, title, date, text }) {
+const BlogCard = ({ id, image, title, date, text }) => {
   const [readMore, setReadMore] = useState(false);
 
   const animStyle = useSpring({

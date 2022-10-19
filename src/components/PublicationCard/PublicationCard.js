@@ -5,7 +5,7 @@ import { FaLink } from "react-icons/fa";
 import paperPic from '../../images/publication/blog1.avif';
 import './PublicationCard.css';
 
-function PublicationCard(props) {
+const PublicationCard = (props) => {
   return (
     <li className="publication-card__item">
       <img className='publication-card__img' src={paperPic} alt={props.title} />

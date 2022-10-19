@@ -9,35 +9,10 @@ import publicationData from '../../data/publications';
 import blogData from '../../data/blog';
 import '../../vendor/fonts/fonts.css';
 import useSemiPersistentState from '../../hooks/useSemiPersistentState';
+import dataReducer from '../../reducers/dataReducer';
 import './App.css';
 
-function App() {
-  const dataReducer = (state, action) => {
-    switch (action.type) {
-      case 'DATA_FETCH_INIT': 
-        return {
-          ...state,
-          isLoading: true,
-          isError: false,
-        };
-      case 'DATA_FETCH_SUCCESS': 
-        return {
-          ...state,
-          isLoading: false,
-          isError: false,
-          data: action.payload,
-        };
-      case 'DATA_FETCH_FAILURE': 
-        return {
-          ...state,
-          isLoading: false,
-          isError: true,
-        };
-      default:
-        throw new Error();
-    }
-  };
-
+const App = () => {
   const [publications, dispatchPubications] = useReducer(
     dataReducer,
     { data: [], isLoading: false, isError: false }

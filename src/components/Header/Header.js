@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring';
 import NavHome from '../NavHome/NavHome';
 import './Header.css';
 
-function Header(props) {
+const Header = () => {
 
   const animStyle = useSpring({
     from: { opacity: 0, transform: 'scale(0)' },
